@@ -2,7 +2,9 @@
   "scripts": {
     "dev": "ts-node-dev --ignore-watch node_modules src/server.ts",
     "typeorm": "typeorm-ts-node-commonjs",
-    "test": "cross-env NODE_ENV=production SECRET_KEY=secret_key jest  --verbose --runInBand"
+    "test": "cross-env NODE_ENV=test SECRET_KEY=secret_key jest  --verbose --runInBand",
+    "build": "rm -rf ./dist && tsc",
+		"start": "node ./dist/index.js"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
@@ -28,5 +30,19 @@
     "pg": "^8.7.3",
     "reflect-metadata": "^0.1.13",
     "typeorm": "^0.3.6"
-  }
+  },
+  "name": "plataform_contacts_db",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasvale95/plataform_contacts_db.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucasvale95/plataform_contacts_db/issues"
+  },
+  "homepage": "https://github.com/lucasvale95/plataform_contacts_db#readme",
+  "description": ""
 }
