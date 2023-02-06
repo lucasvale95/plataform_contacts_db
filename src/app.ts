@@ -5,7 +5,7 @@ import userRoutes from "./routes/user.routes";
 import handleErrorMiddleware from "./middleware/handleError.middleware";
 import sessionRoutes from "./routes/sessions.routes";
 import contactsRoutes from "./routes/contacts.routes";
-import { AppDataSource } from './data-source'
+import AppDataSource from './data-source'
 
 
 AppDataSource.initialize().then(() => {
