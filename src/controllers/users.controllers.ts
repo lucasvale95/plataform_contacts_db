@@ -12,7 +12,8 @@ const createUserController = async (req: Request, res: Response) => {
 };
 
 const listUsersController = async (req: Request, res: Response) => {
-  const users = await listUsersService();
+  const id = req.user.id;
+  const users = await listUsersService(id);
   return res.json(instanceToPlain(users));
 };
 
